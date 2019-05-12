@@ -15,9 +15,9 @@
           "options": {
             "outputPath": "dist/server-side-rendering",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "main": "src/browser.main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "tsConfig": "src/browser.tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -36,6 +36,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -75,9 +76,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
+            "main": "src/server.main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
+            "tsConfig": "src/server.tsconfig.app.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               "src/styles.css"
